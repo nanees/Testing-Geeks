@@ -1,0 +1,25 @@
+{
+  "name": "Zid_Test",
+  "version": "1.0.0",
+  "description": "Testing Geeks Assessment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "private": true,
+  "cypress-cucumber-preprocessor": {
+    "commonPath": "common",
+    "step_definitions": "cypress/step_definitions"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^4.2.0",
+    "cypress-cucumber-preprocessor": "^2.1.0",
+    "ts-node": "^8.8.1"
+  },
+  "dependencies": {
+    "@types/node": "^13.9.5",
+    "tsify": "^4.0.1"
+  }
+}

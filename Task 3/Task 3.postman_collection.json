@@ -1,0 +1,221 @@
+{
+	"info": {
+		"_postman_id": "2acd1c00-0850-4d50-bad9-1ef1aee23ab6",
+		"name": "Task 3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Valid Register Flow",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Nanees",
+							"type": "text"
+						},
+						{
+							"key": "only_mobile_number",
+							"value": "178457630",
+							"type": "text"
+						},
+						{
+							"key": "registration_email",
+							"value": "nanees.nabil@hotmail.com",
+							"type": "text"
+						},
+						{
+							"key": "registration_password",
+							"value": "nanees123",
+							"type": "text"
+						},
+						{
+							"key": "store_username",
+							"value": "thiscompany",
+							"type": "text"
+						},
+						{
+							"key": "store_name",
+							"value": "نانيس",
+							"type": "text"
+						},
+						{
+							"key": "store_category_id",
+							"value": "كتب",
+							"type": "text"
+						},
+						{
+							"key": "started_business_before_registration",
+							"value": "0",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://web.zid.sa/register",
+					"protocol": "https",
+					"host": [
+						"web",
+						"zid",
+						"sa"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Valid Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "{{email}}",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "{{password}}",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://web.zid.sa/{{endpoint}}",
+					"protocol": "https",
+					"host": [
+						"web",
+						"zid",
+						"sa"
+					],
+					"path": [
+						"{{endpoint}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Invalid Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "nnf59@hotmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "nanees12345",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://web.zid.sa/login",
+					"protocol": "https",
+					"host": [
+						"web",
+						"zid",
+						"sa"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Invalid Register Flow",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Nanees",
+							"type": "text"
+						},
+						{
+							"key": "only_mobile_number",
+							"value": "128457630",
+							"type": "text"
+						},
+						{
+							"key": "registration_email",
+							"value": "nnf59@hotmail.com",
+							"type": "text"
+						},
+						{
+							"key": "registration_password",
+							"value": "nanees123",
+							"type": "text"
+						},
+						{
+							"key": "store_username",
+							"value": "Mycompany",
+							"type": "text"
+						},
+						{
+							"key": "store_name",
+							"value": "نانيس",
+							"type": "text"
+						},
+						{
+							"key": "store_category_id",
+							"value": "كتب",
+							"type": "text"
+						},
+						{
+							"key": "started_business_before_registration",
+							"value": "0",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://web.zid.sa/register",
+					"protocol": "https",
+					"host": [
+						"web",
+						"zid",
+						"sa"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
